@@ -18,3 +18,4 @@ RENAME COLUMN type TO species;
 
 ALTER TABLE animals
 ALTER COLUMN species TYPE VARCHAR;
+
