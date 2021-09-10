@@ -43,4 +43,30 @@ VALUES(1, 1, 10),
 
 SELECT * FROM cart
 WHERE user_id = 1;
---to be continued
+
+--all products all carts all user info
+SELECT u.name, u.email, p.name, p.price, c.quantity
+FROM users u
+JOIN cart c 
+ON u.user_id = c.user_id
+JOIN products p 
+ON p.products_id = c.products_id;
+
+--total cost of all orders
+SELECT u.name, (p.price * c.quantity) AS total_cost
+FROM users u
+JOIN cart c 
+ON u.user_id = c.user_id
+JOIN products p 
+ON p.products_id = c.products_id;
+
+UPDATE 
+
+
+
+
+
+
+
+
+
