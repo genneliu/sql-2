@@ -60,7 +60,11 @@ ON u.user_id = c.user_id
 JOIN products p 
 ON p.products_id = c.products_id;
 
-UPDATE 
+
+--update ann's cart
+UPDATE cart 
+SET quantity = 5 
+WHERE user_id = 2 AND products_id = 2;
 
 
 
