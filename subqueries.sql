@@ -18,3 +18,6 @@ SELECT t.name
 FROM track t 
 WHERE album_id IN (SELECT album_id FROM album WHERE title = 'Fireball');
 
+SELECT t.name 
+FROM track t
+WHERE album_id IN (SELECT album_id FROM album WHERE artist_id IN (SELECT artist_id FROM artist WHERE name = 'Queen'));
